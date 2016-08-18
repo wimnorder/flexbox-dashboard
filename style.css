@@ -35,9 +35,8 @@ body {
   padding: 20px;
   background: #eee;
   box-shadow: 0 0 5px black;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(50px, 0, 0);
   transition: transform .3s;
-  cursor: pointer;
 }
 
 .content.isOpen {
@@ -73,6 +72,7 @@ body {
   color: #eee;
   border-bottom: 1px solid #222;
   transition: background ease-out 0.5s;
+  cursor: pointer;
 }
 
 .nav li a:before {
@@ -100,6 +100,11 @@ body {
   left: 23px;
 }
 
+.nav li:nth-child(4) a:before {
+  content: '\f021';
+  left: 23px;
+}
+
 
 .nav li a:hover {
   background: #444;
@@ -121,4 +126,22 @@ h2 {
   font-size: 18px;
   font-weight: 400;
   color: #999;
+}
+
+.flex-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  flex: 1;
+  background: #aaa;
+  width: 100px;
+  height: 100px;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
 }
