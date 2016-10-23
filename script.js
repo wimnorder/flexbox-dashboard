@@ -22,6 +22,21 @@ app.directive('sidebarDirective', function() {
             });
         }
     };
+});
+
+app.directive('sidebarCompact', function() {
+    return {
+        link : function(scope, element, attr) {
+            scope.$watch(attr.sidebarCompact, function(newVal) {
+                  if(newVal)
+                  {
+                    element.addClass('isOpen'); 
+                    return;
+                  }
+                    element.removeClass('isOpen');
+            });
+        }
+    };
 });  
 
 }())
